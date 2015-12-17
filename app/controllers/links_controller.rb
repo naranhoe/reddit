@@ -11,6 +11,7 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
+    @link = current_user.links.find_by(params[:url])
   end
 
   # GET /links/new
